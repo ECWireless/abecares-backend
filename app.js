@@ -106,7 +106,7 @@ router.post('/upload', (req, res, next) => {
     }
 
     const file = req.files.file
-    file.mv(`${__dirname}/uploads/`, err => {
+    file.mv(`${__dirname}/uploads/${file.name}`, err => {
         if (err) {
             console.error(err)
             return res.status(500).send(err)
