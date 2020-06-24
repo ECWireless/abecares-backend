@@ -76,7 +76,7 @@ router.post('/application', (req, res, next) => {
         text: content,
         attachments: [
             {   // filename and content type is derived from path
-                path: coverLetterPath
+                path: __dirname + coverLetterPath
             }
         ]
     }
@@ -91,7 +91,7 @@ router.post('/application', (req, res, next) => {
                 status: 'success'
             })
             console.log('File Deleted')
-            fs.unlink(coverLetterPath, err => {
+            fs.unlink(__dirname + coverLetterPath, err => {
                 if (err) {
                     console.log(err)
                 }
@@ -106,7 +106,7 @@ router.post('/upload', (req, res, next) => {
     }
 
     const file = req.files.file
-    file.mv(`/uploads/${file.name}`, err => {
+    file.mv(`${__dirname}/uploads/`, err => {
         if (err) {
             console.error(err)
             return res.status(500).send(err)
