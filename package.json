@@ -1,0 +1,27 @@
+{
+  "name": "abecares-backend",
+  "version": "1.0.0",
+  "description": "The backend server for AbeCares.com",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ECWireless/abecares-backend.git"
+  },
+  "author": "ECWireless",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ECWireless/abecares-backend/issues"
+  },
+  "homepage": "https://github.com/ECWireless/abecares-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.7-alpha.3",
+    "fs": "0.0.1-security",
+    "nodemailer": "^6.4.10"
+  }
+}
